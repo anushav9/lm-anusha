@@ -1,0 +1,21 @@
+.appStoreButtons {
+    .appStoreButton {
+        width: 150px;
+        height: 45px;
+        max-width: none;
+        display: inline-block;
+    }
+
+    ul {
+        list-style-type: none;
+        // padding: 5px;
+    }
+
+    .navListHoriz {
+        display: inline-flex;
+
+        .navList__item {
+            padding: 0 5px;
+        }
+    }
+}

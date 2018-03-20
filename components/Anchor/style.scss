@@ -1,0 +1,17 @@
+@import 'theme';
+
+.anchor {
+    text-decoration: none;
+    color: $color-primary;
+
+    &:hover { color: lighten($color-primary, 15%); }
+
+    &--underline {
+        box-shadow: 0 1px 0 0 lighten($color-primary, 25%);
+        //
+        // &:hover {
+        //     color: darken($color-secondary, 15%);
+        //     box-shadow: 0 1px 0 0 $color-secondary;
+        // }
+    }
+}

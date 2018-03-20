@@ -1,0 +1,39 @@
+@import 'theme';
+
+.mainFooter {
+    background-color: $color-footer;
+
+    .container {
+        color: $color-dimmedText;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include tablet {
+            flex-direction: row;
+        }
+
+        justify-content: space-between;
+
+        .navList .navList__link {
+            color: $white;
+            font-weight: $font-weight;
+            display: inline-block;
+            padding: 5px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+
+        .navListHoriz {
+            margin: 0;
+            display: inline-flex;
+        }
+    }
+}

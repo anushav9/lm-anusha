@@ -1,0 +1,115 @@
+@import 'theme';
+
+.section {
+    position: relative;
+    padding: 15px 0;
+
+    p {
+        color: $color-dimmedText;
+    }
+
+    @include desktop {
+        padding: 20px 0;
+    }
+
+    &.section__hasHeaderOnTop {
+        padding-top: $header-height + 25px;
+
+        @include tablet {
+            padding-top: $header-height + 50px;
+        }
+
+        @include desktop {
+            padding-top: $header-height + 100px;
+        }
+    }
+
+    .section__mask {
+        background: rgba(0,0,0,0.2);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+.section__headerWithBorder {
+    border-bottom: 1px solid rgba(107,124,147,0.12);
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.section_large {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @include tablet {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    @include desktop {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+.section_huge {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    @include tablet {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    @include desktop {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    font-size: 1.6rem;
+}
+
+.section_contrast {
+    background-color: $color-deepSapphireBlue;
+    color: $color-dimmedText;
+
+    p {
+        color: $color-dimmedText;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $white;
+    }
+
+    .section__footer {
+        color: $body-text;
+    }
+}
+
+.section_light {
+    background-color: $color-aliceBlue;
+    color: $body-text-secondary;
+    text-align: center;
+}
+
+.section_banner {
+    color: $white;
+    font-weight: $font-weight-light;
+
+    // p {
+    //     color: rgba(255,255,255,.6);
+    // }
+}
+
+.section_brandPrimary {
+    background: $color-gradient-primary;
+    text-align: center;
+}

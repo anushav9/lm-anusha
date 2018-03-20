@@ -1,0 +1,44 @@
+.icon {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+
+    background: 50% 50% no-repeat;
+    background-size: contain;
+}
+
+.icon__time {
+    background-image: url('/assets/images/time-icon.png');
+}
+
+.icon__repeat {
+    background-image: url('/assets/images/repeat-icon.png');
+}
+
+.icon__heart {
+    background-image: url('/assets/images/care-icon.png');
+}
+
+.icon__washing {
+    background-image: url('/assets/images/laundry-icon.png');
+}
+
+.icon__drycleaning {
+    background-image: url('/assets/images/dry-cleaner-icon.png');
+}
+
+.icon__tailoring {
+    background-image: url('/assets/images/tailor-icon.png');
+}
+
+.icon__order {
+    background-image: url('/assets/images/manage-order-icon.png');
+}
+
+.icon__send {
+    background-image: url('/assets/images/manage-drivers-icon.png');
+}
+
+.icon__notification {
+    background-image: url('/assets/images/notification-icon.png');
+}

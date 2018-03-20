@@ -1,0 +1,23 @@
+@import 'theme';
+
+.mainHomePageHero {
+    background-size: cover;
+    text-align: center;
+
+    @include desktop {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+
+    @include screen-sm {
+        text-align: left;
+    }
+
+    .section__mask {
+        background: $background-mask;
+
+        @include tablet {
+            display: none;
+        }
+    }
+}

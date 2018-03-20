@@ -1,0 +1,17 @@
+@import 'theme';
+@import 'buttons';
+
+.finalCTA {
+    .finalCTA__content {
+        display: flex;
+        align-items: center;
+        flex: 1 1 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    span {
+        display: inline-block;
+        margin: 10px;
+    }
+}

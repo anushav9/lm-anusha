@@ -1,0 +1,15 @@
+@import 'theme';
+
+.error {
+    padding: $gutter-lg;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.image {
+    margin-bottom: $gutter-lg;
+}

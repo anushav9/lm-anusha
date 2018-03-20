@@ -1,0 +1,119 @@
+@import 'theme';
+
+.heading {
+    font-weight: bold;
+    margin: 1.414rem 0 0.5rem;
+    line-height: 1.2;
+    font-family: 'Avenir', 'Camphor', $font-family;
+    // letter-spacing: 0.01em;
+    color: $color-contentText;
+
+    &--h1 {
+
+
+        font-size: 3.998rem;
+        font-weight: $font-weight-bold;
+        margin-top: 0;
+
+        // @include breakpoint(small) {
+        //     font-size: 4rem;
+        // }
+        //
+        // @include breakpoint(medium) {
+        //     font-size: 4.8rem;
+        // }
+    }
+
+    &--h2 {
+        font-size: 2.827rem;
+        font-weight: $font-weight-bold;
+        margin-bottom: 0.5em;
+
+        // @include breakpoint(small) {
+        //     font-size: 3.2rem;
+        // }
+        //
+        // @include breakpoint(medium) {
+        //     font-size: 3.6rem;
+        // }
+    }
+
+    &--h3 {
+        font-size: 1.999rem;
+        font-weight: $font-weight-light;
+        color: $brand-primary;
+        margin-bottom: 0.6em;
+        margin-top: 0;
+        // @include breakpoint(small) {
+        //     font-size: 2.7rem;
+        // }
+        //
+        // @include breakpoint(medium) {
+        //     font-size: 3rem;
+        // }
+    }
+
+    &--h4 {
+        font-size: 1.414rem;
+        font-weight: bold;
+
+        // @include breakpoint(medium) {
+        //     font-size: 2.4rem;
+        // }
+    }
+
+    &--h5 {
+        font-size: 2rem;
+
+        @include breakpoint(medium) {
+            font-size: 2rem;
+        }
+    }
+
+    &--h6 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &--fullMargin {
+        margin-top: 1.5em;
+    }
+
+    &--fullMargin {
+        margin-top: 1.5em;
+    }
+
+    &--noMargin {
+        margin: 0;
+    }
+
+    &--weight-lighter {
+        font-weight: $font-weight-lighter;
+    }
+
+    &--weight-light {
+        font-weight: $font-weight-light;
+    }
+
+    &--weight-normal {
+        font-weight: normal;
+    }
+
+    &--weight-semibold {
+        font-weight: $font-weight-semibold;
+    }
+
+    &--weight-bold {
+        font-weight: $font-weight-bold;
+    }
+
+    &--dim {
+        color: $color-dimmedText;
+    }
+}
+
+@each $kind, $color in $color-presets {
+    .heading--#{$kind} {
+        color: $color;
+    }
+}

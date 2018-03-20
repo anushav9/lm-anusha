@@ -1,0 +1,82 @@
+@import 'theme';
+
+// Defaults
+$stroke: 3px;
+$size: 40px;
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.main {
+    width: $size;
+    height: $size;
+    font-size: $size;
+    display: inline-block;
+    position: relative;
+    border-radius: 1000px;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    overflow: hidden;
+    vertical-align: middle;
+
+    &--indeterminate {
+        backface-visibility: hidden;
+        animation: rotate 500ms linear 0s infinite;
+    }
+}
+
+.circle {
+    width: 1em;
+    height: 1em;
+    transition: transform 200ms linear;
+    backface-visibility: hidden;
+    position: absolute;
+    border: $stroke solid;
+    clip: rect(0 0.5em 1em 0);
+    border-radius: 1000px;
+}
+
+.content {
+    display: table;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-size: $font-size;
+}
+
+.content-inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.track {
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    border: $stroke solid $palette-grey200;
+    border-radius: 50%;
+}
+
+.mask {
+    width: 1em;
+    height: 1em;
+    transition: transform 200ms linear;
+    backface-visibility: hidden;
+    position: absolute;
+    clip: rect(0 1em 1em 0.5em);
+}
+
+
+@each $kind, $color in $color-presets {
+    .circle--#{$kind} {
+        border-color: $color;
+    }
+}
