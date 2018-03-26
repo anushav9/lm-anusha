@@ -76,6 +76,7 @@ module.exports = {
         'react/prop-types': 'off',
         'react/forbid-prop-types': ['off'],
         'react/jsx-indent': ['error', 4],
+        'react/jsx-pascal-case': 'off',
         'react/require-default-props': 'off',
         'react/jsx-indent-props': ['error', 4],
         'react/no-unused-prop-types': ['off'],
