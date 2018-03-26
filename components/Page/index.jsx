@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { classy } from 'utils';
 import style from './style.scss';
-import { Helmet} from 'components';
+import { Helmet, Header, Footer, MainFooter} from 'components';
 
 export default class Page extends Component {
     render() {
@@ -16,7 +16,10 @@ export default class Page extends Component {
                 )}
                 style={inlineStyle}
             >
+                <Header/>
                 {children}
+                <Footer/>
+                <MainFooter/>
             </div>
         );
     }

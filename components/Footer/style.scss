@@ -4,11 +4,11 @@
     .footer__logo {
         width: 150px;
         height: 23px;
+        margin-bottom: 5px;
     }
 
-    ul {
-        list-style-type: none;
-        padding: 0;
+    .footer__item {
+        padding: 0 15px;
     }
 
     .navList__item {
@@ -23,46 +23,16 @@
             }
         }
     }
+
+    .socialMediaIcons {
+        .navList__item {
+            font-size: 20px;
+            padding: 5px;
+        }
+    }
+
+    .horiz {
+        margin: 0;
+        display: inline-flex;
+    }
 }
-
-// .navList {
-//     font-size: 14px;
-//     line-height: 1.35;
-// }
-
-// .section--footer {
-//      // background-color: $color-deepSapphireBlue;
-//
-//
-//      .socialMediaIcons {
-//           .navList__item {
-//                font-size: 20px;
-//                padding: 5px;
-//           }
-//      }
-//      .section__content {
-//           .footer__item {
-//                p {
-//                     color: $body-text;
-//                }
-//                h4 {
-//                     color: $color-dimmedText;
-//                }
-//                a {
-//                     color: $white;
-//                     text-decoration: underline;
-//                     &:hover {
-//                          color: $brand-primary;
-//                     }
-//                }
-//                .navList {
-//                     font-size: 14px;
-//                     line-height: 1.35;
-//                     .navList__link {
-//                          padding-left: 0;
-//                          padding-right: 0;
-//                     }
-//                }
-//           }
-//      }
-// }

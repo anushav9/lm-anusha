@@ -6,88 +6,10 @@ ul {
     padding: 0;
 }
 
-.mainHomePageHero {
-    background: url(../../assets/images/user-hero.jpg) 50% 50% no-repeat;
-    background-size: cover;
-}
 
-.section {
-    padding: 20px 0;
-}
-
-.mapCoverageArea {
-    background-color: $background-primary;
-    color: $body-text-secondary;
-    padding-top: 20px;
-
-    .mapCoverageAreaImage {
-        text-align: center;
-
-        @include desktop {
-            margin: -40px 0 0 0;
-        }
-
-        img {
-            max-height: 240px;
-        }
+//SERVICES OFFERED CARDS
+.servicesOfferedCards {
+    .card__row > * {
+        margin: 10px 0;
     }
-
-    &__p {
-        @include tablet {
-            padding-bottom: 20px;
-            border-bottom: 1px solid rgba(107,124,147,0.12);
-            margin-bottom: 1.3rem;
-        }
-    }
-
-    &__a {
-        color: $brand-primary;
-        font-weight: $font-weight-bold;
-    }
-}
-
-.stepsToGetStarted {
-    .stepsToGetStartedImage {
-        padding: 0 15px;
-    }
-
-    .stepsToGetStartedContent {
-        padding: 0 15px;
-    }
-}
-
-// .finalCTAWithCredit {
-//     .button__cta {
-//         background: linear-gradient(270deg, #4DD0E1 0%, #2196F3 100%);
-//     }
-// }
-
-
-.aboutTheMobileApp {
-    color: $body-text-secondary;
-    background-color: $background-primary;
-
-    &__content {
-        background-color: $color-aliceBlue;
-        padding: 30px;
-
-
-        @include tablet {
-            padding-top: 80px;
-            padding-bottom: 80px;
-        }
-    }
-
-    // &__image {
-    //     @include tablet {
-    //         // position: absolute;
-    //         bottom: 0;
-    //         top: 80px;
-    //     }
-    //
-    //     @include desktop {
-    //         left: 0;
-    //         top: -10px;
-    //     }
-    // }
 }

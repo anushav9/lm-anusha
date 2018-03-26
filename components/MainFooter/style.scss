@@ -19,19 +19,18 @@
 
         justify-content: space-between;
 
-        .navList .navList__link {
-            color: $white;
-            font-weight: $font-weight;
-            display: inline-block;
-            padding: 5px;
+        .navList {
+            margin: 0;
 
-            &:hover {
-                text-decoration: underline;
+            .navList__link {
+                color: $white;
+                font-weight: $font-weight;
+                display: inline-block;
+                padding: 5px;
             }
         }
 
-
-        .navListHoriz {
+        .horiz {
             margin: 0;
             display: inline-flex;
         }

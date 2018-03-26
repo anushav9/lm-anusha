@@ -1,0 +1,20 @@
+@import 'theme';
+
+.aboutTheMobileApp {
+    color: $body-text-secondary;
+    background-color: $background-primary;
+
+    &__content {
+        background-color: $color-aliceBlue;
+        padding: 30px;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+
+        @include tablet {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+    }
+}

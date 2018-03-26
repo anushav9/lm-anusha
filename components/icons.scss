@@ -2,21 +2,20 @@
     width: 50px;
     height: 50px;
     display: inline-block;
-
     background: 50% 50% no-repeat;
     background-size: contain;
 }
 
-.icon__time {
-    background-image: url('/assets/images/time-icon.png');
-}
-
-.icon__repeat {
-    background-image: url('/assets/images/repeat-icon.png');
-}
-
-.icon__heart {
-    background-image: url('/assets/images/care-icon.png');
+.icon__number {
+    background: linear-gradient(133.62deg, #2B91FE 0%, #485FFF 100%);
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.8em;
+    line-height: 1.8em;
+    text-align: center;
+    width: 50px;
 }
 
 .icon__washing {
@@ -29,16 +28,4 @@
 
 .icon__tailoring {
     background-image: url('/assets/images/tailor-icon.png');
-}
-
-.icon__order {
-    background-image: url('/assets/images/manage-order-icon.png');
-}
-
-.icon__send {
-    background-image: url('/assets/images/manage-drivers-icon.png');
-}
-
-.icon__notification {
-    background-image: url('/assets/images/notification-icon.png');
 }

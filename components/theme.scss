@@ -1,8 +1,4 @@
-
-$white: #FFFFFF;   //white
-
-
-
+$white: #FFF;   //white
 $body-text: rgba(255,255,255,0.7);
 $body-text-secondary: #6B7C93;
 $color-dimmedText: #A0AEC0; //grey
@@ -29,8 +25,6 @@ $color-gradient-washing: linear-gradient(90deg, #9850DC 0%, #DB63A6 100%);
 $color-gradient-drycleaning: linear-gradient(90deg, #13A0E2 0%, #01D7C9 100%);
 $color-gradient-tailoring: linear-gradient(90deg, #FF4B75 0%, #FFADA0 100%);
 $color-gradient-primary: linear-gradient(133.62deg, #2B91FE 0%, #485FFF 100%);
-
-
 
 $font-weight-lighter: 200;
 $font-weight-light: 300;
@@ -79,7 +73,7 @@ $radius: 2px;
 $radius-large: 5px;
 
 $font-family-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-family: 'Proxima Nova', $font-family-system;
+$font-family: 'Avenir', $font-family-system;
 $font-family-monospace: "SFMono-Regular", Menlo, "Source Code Pro", Consolas, "Liberation Mono", Courier, monospace;
 $font-size: 1.4rem;
 

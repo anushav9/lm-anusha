@@ -25,6 +25,30 @@ export default (
                path="/laundromat"
                component={require('routes/laundromat').default}
             />
+
+            <Route
+               exact
+               path="/dry-cleaner"
+               component={require('routes/dry-cleaner').default}
+            />
+
+            <Route
+               exact
+               path="/tailor"
+               component={require('routes/tailor').default}
+            />
+
+            <Route
+               exact
+               path="/stay-at-home"
+               component={require('routes/stay-at-home').default}
+            />
+
+            <Route
+               exact
+               path="/locations"
+               component={require('routes/locations').default}
+            />
         </Switch>
     </RootContainer>
 );

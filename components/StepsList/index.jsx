@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import style from './style.scss';
+import {Heading, Paragraph} from 'components';
 
 export default class StepsList extends Component {
     render() {
@@ -9,8 +10,8 @@ export default class StepsList extends Component {
                     {this.props.steps.map(({title, paragraph}) => {
                         return (
                             <li className={style.item}>
-                                <h4>{title}</h4>
-                                <p>{paragraph}</p>
+                                <Heading kind="h4">{title}</Heading>
+                                <Paragraph>{paragraph}</Paragraph>
                             </li>
                         );
                     })}

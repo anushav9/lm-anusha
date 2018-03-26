@@ -72,6 +72,8 @@ export default class RootContainer extends Component {
 
                 {appconfig.twitter && <meta name="twitter:site" content={appconfig.twitter.username} />}
                 {appconfig.facebook && <meta name="fb:app_id" content={appconfig.facebook.app_id} />}
+                <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css"/>
+
             </Helmet>,
             children,
         ];

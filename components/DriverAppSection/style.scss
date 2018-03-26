@@ -1,0 +1,19 @@
+@import 'theme';
+
+.driverAppSection {
+    background: url(../../assets/images/driver-map.png) 50% 50% no-repeat;
+    background-size: cover;
+
+    &__content {
+        padding: 30px;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+
+        @include tablet {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+    }
+}

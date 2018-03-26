@@ -1,7 +1,10 @@
 @import 'theme';
+@import 'buttons';
 
 .mainHomePageHero {
-    background-size: cover;
+    .section__content {
+        position: relative;
+    }
     text-align: center;
 
     @include desktop {
@@ -13,8 +16,13 @@
         text-align: left;
     }
 
-    .section__mask {
-        background: $background-mask;
+    .paragraph {
+        color: $body-text;
+        font-weight: $font-weight-light;
+    }
+
+    .mask {
+        background-color: $background-mask;
 
         @include tablet {
             display: none;

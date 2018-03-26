@@ -1,0 +1,12 @@
+@import 'icons';
+@import 'theme';
+
+.dashboardForBusiness {
+    .dashboardForBusiness__image {
+        text-align: center;
+
+        @include desktop {
+            margin: 40px 0 0 0;
+        }
+    }
+}

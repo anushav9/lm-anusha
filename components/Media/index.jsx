@@ -1,30 +1,37 @@
 import React, { Component } from 'react';
 import style from './style.scss';
+import { classy } from 'utils';
 import timeImage from '../../assets/images/time-icon.png';
-import {Grid, Grid_Cell} from 'components';
+import {Heading, Paragraph,Grid, Grid_Cell} from 'components';
 import userHero from '../../assets/images/user-hero.jpg';
-// var icon =
 
 export default class Media extends Component {
     render() {
         return (
-                    <div className={style.media}>
-                        <Grid>
-                            {this.props.media.map(({icon, title, paragraph}) => {
-                                return (
-                                    <Grid_Cell md={4} style={{margin:'20px'}}>
-                                        <div>
-                                             {icon &&
-                                                <div><img src={icon} /></div>
-                                            }
-                                            <h3>{title}</h3>
-                                            <p>{paragraph}</p>
-                                        </div>
-                                        </Grid_Cell>
-                                );
-                            })}
-                        </Grid>
-                    </div>
+            <Grid>
+                {this.props.media.map(({icon,numberedIcon, title, paragraph}) => {
+                    return (
+                        <Grid_Cell md={this.props.md} sm={this.props.sm}>
+                            <div className={style.media}>
+                                {icon &&
+                                    <div className={style.media__object}>
+                                        <div className={style.icon}><img src={icon}/></div>
+                                    </div>
+                                }
+                                {numberedIcon &&
+                                    <div className={style.media__object}>
+                                        <span className={classy(style.icon, style.icon__number)}>{numberedIcon}</span>
+                                    </div>
+                                }
+                                <div className={style.media__content}>
+                                    <Heading kind='h3'>{title}</Heading>
+                                    <Paragraph>{paragraph}</Paragraph>
+                                </div>
+                            </div>
+                        </Grid_Cell>
+                    );
+                })}
+            </Grid>
         );
     }
 }

@@ -13,7 +13,7 @@ export default class MainFooter extends Component {
                          <span>Copyright &copy; 2017 LaundryMate</span>
                     </div>
                     <div>
-                         <ul className={classy(style.navList,style.navListHoriz,this.props.className)}>
+                         <ul className={classy(style.navList,style.horiz,this.props.className)}>
                               <li className={style.navList__item}>
                                    <a className={style.navList__link} href="#">Terms of Use</a>
                               </li>

@@ -54,7 +54,7 @@ export default class Paragraph extends Component {
         );
 
         return (
-            <div {...rest} style={inlineStyle} className={className}>{children}</div>
+            <div {...rest} style={inlineStyle} className={classy(style.paragraph, className)}>{children}</div>
         );
     }
 }

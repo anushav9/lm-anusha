@@ -1,0 +1,9 @@
+@import 'theme';
+@import 'buttons';
+
+.partnerShipCTA {
+    color: $body-text;
+    font-weight: $font-weight-light;
+    background: #494e56 url(../../assets/images/footer-cta.jpg) 50% 50% no-repeat;
+    background-size: cover;
+}

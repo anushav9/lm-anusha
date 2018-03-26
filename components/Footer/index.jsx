@@ -12,36 +12,36 @@ export default class Footer extends Component {
                 <Container>
                     <Grid>
 
-                        <Grid_Cell sm={6} md={3}>
+                        <Grid_Cell className={style.footer__item} sm={6} md={3}>
 
                             <img className={style.footer__logo} src="../../assets/images/logo_white.png" alt="LaundryMate"/>
 
-                            <Paragraph >Laundry and dry-cleaning on demand, delivered right to your door.</Paragraph>
-                            <div>
-                                <ul className={style.navList}>
+                            <Paragraph style={{marginBottom:'0'}}>Laundry and dry-cleaning on demand, delivered right to your door.</Paragraph>
+                            <div className={style.socialMediaIcons}>
+                                <ul className={classy(style.navList,style.horiz,this.props.className)}>
                                     <li className={classy(style.navList__item, style.socialMediaIcons__item__facebook)}>
                                         <a className={style.navList__link} href="https://www.facebook.com" target="_blank">
-                                        {/* <i className="mdi mdi-facebook"></i> */}
+                                        <i className="mdi mdi-facebook"></i>
                                     </a>
                                 </li>
                                 <li className={classy(style.navList__item, style.socialMediaIcons__item__twitter)}>
                                     <a className={style.navList__link} href="https://www.twitter.com" target="_blank">
-                                    {/* <i className="mdi mdi-twitter"></i> */}
+                                    <i className="mdi mdi-twitter"></i>
                                 </a>
                             </li>
                             <li className={classy(style.navList__item, style.socialMediaIcons__item__gmail)}>
                                 <a className={style.navList__link} href="https://www.gmail.com" target="_blank">
-                                {/* <i className="mdi mdi-email"></i> */}
+                                <i className="mdi mdi-email"></i>
                             </a>
                         </li>
                     </ul>
                 </div>
             </Grid_Cell>
 
-            <Grid_Cell sm={6} md={3}>
+            <Grid_Cell className={style.footer__item} sm={6} md={3}>
                 <Heading kind='h4'>LaundryMate</Heading>
-                <div className={style.navList}>
-                    <ul>
+                <div>
+                    <ul className={style.navList}>
                         <li className={style.navList__item}>
                             <a className={style.navList__link} href="#">Laundromat</a>
                         </li>
@@ -58,10 +58,10 @@ export default class Footer extends Component {
                 </div>
             </Grid_Cell>
 
-            <Grid_Cell sm={6} md={3}>
+            <Grid_Cell className={style.footer__item} sm={6} md={3}>
                 <Heading kind='h4'>Partners</Heading>
-                <div className={style.navList}>
-                    <ul>
+                <div>
+                    <ul  className={style.navList}>
                         <li className={style.navList__item}>
                             <a className={style.navList__link} href="#">Partner Login</a>
                         </li>
@@ -72,7 +72,7 @@ export default class Footer extends Component {
                 </div>
             </Grid_Cell>
 
-            <Grid_Cell sm={6} md={3}>
+            <Grid_Cell className={style.footer__item} sm={6} md={3}>
                 <Heading kind='h4'>Get the App</Heading>
                 <AppStoreButtons></AppStoreButtons>
             </Grid_Cell>

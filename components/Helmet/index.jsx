@@ -7,7 +7,6 @@ export default class Page extends Component {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>My Title</title>
-                 <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css"/>
             </Helmet>
         );
     }

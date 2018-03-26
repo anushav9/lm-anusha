@@ -1,0 +1,12 @@
+@import 'theme';
+
+.stepsToGetStarted {
+    &__image {
+        display: none;
+
+        @include screen-sm {
+            display: block;
+        }
+        padding: 0 15px;
+    }
+}

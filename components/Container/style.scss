@@ -1,6 +1,21 @@
 @import 'theme';
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 576px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include tablet {
+        max-width: 720px;
+    }
+
+    @include desktop {
+        max-width: 960px;
+    }
+
+    @include hd-desktop {
+        max-width: 1140px;
+    }
 }

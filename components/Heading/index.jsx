@@ -39,7 +39,7 @@ export default class Heading extends Component {
         );
 
         return (
-            <Tagname {...rest} style={inlineStyle} className={className}>{children}</Tagname>
+            <Tagname {...rest} style={inlineStyle} className={classy(style.heading, className)}>{children}</Tagname>
         );
     }
 }
