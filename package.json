@@ -1,0 +1,165 @@
+{
+  "name": "LaundryMateSite",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=testing jest",
+    "dll": "NODE_ENV=development ./node_modules/.bin/webpack --config internals/webpack/dll",
+    "start": "NODE_ENV=development node internals/server-development",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "node internals/build client",
+    "build:server": "node internals/build server",
+    "clean-cache": "rm .cache/*",
+    "lint:style": "./node_modules/.bin/stylelint \"app/**/*.scss\" --syntax scss",
+    "production": "node internals/server-production",
+    "deploy": "node internals/deployment/manual"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Audentio/react-boilerplate.git"
+  },
+  "author": "Audentio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Audentio/react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/Audentio/react-boilerplate#readme",
+  "devDependencies": {
+    "@audentio/eslint-config-standard": "^1.0.94",
+    "autoprefixer": "^7.2.1",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-lodash": "^3.3.2",
+    "babel-plugin-syntax-flow": "^6.18.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "browserslist": "^2.10.0",
+    "case-sensitive-paths-webpack-plugin": "^2.1.1",
+    "cheerio": "^1.0.0-rc.2",
+    "css-loader": "^0.28.7",
+    "cssnano": "^3.10.0",
+    "ejs": "^2.5.7",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint-plugin-flowtype": "^2.40.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "flow-bin": "^0.61.0",
+    "jest": "^21.2.1",
+    "jest-enzyme": "^4.0.1",
+    "json-loader": "^0.5.7",
+    "lodash-webpack-plugin": "^0.11.4",
+    "node-sass": "^4.7.2",
+    "node-watch": "^0.5.5",
+    "noop-webpack-plugin": "^1.0.1",
+    "optimize-css-assets-webpack-plugin": "^3.2.0",
+    "react-error-overlay": "^3.0.0",
+    "react-hot-loader": "^3.1.3",
+    "react-test-renderer": "^16.2.0",
+    "redbox-react": "^1.5.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "stylelint": "^8.3.1",
+    "stylelint-config-standard": "^18.0.0",
+    "supertest": "^3.0.0",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-bundle-analyzer": "^2.9.1",
+    "webpack-dev-server": "^2.9.5",
+    "webpack-md5-hash": "^0.0.6"
+  },
+  "jest": {
+    "verbose": true,
+    "globals": {
+      "__DEV__": true,
+      "__BROWSER__": true
+    },
+    "setupFiles": [
+      "<rootDir>/internals/jest_setup.js"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx)$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?@audentio/*)"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "identity-obj-proxy"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "app",
+      "."
+    ],
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react/",
+      "<rootDir>/node_modules/enzyme/",
+      "<rootDir>/node_modules/nock/"
+    ],
+    "collectCoverageFrom": [
+      "<rootDir>/app/**/*.{js,jsx}",
+      "<rootDir>/server/**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/dist/**"
+    ]
+  },
+  "dependencies": {
+    "@audentio/utils": "^1.0.1",
+    "clean-css": "^4.1.9",
+    "compression": "^1.7.1",
+    "cookie-parser": "^1.4.3",
+    "core-js": "^2.5.3",
+    "date-fns": "2.0.0-alpha.6",
+    "deployrjs": "^0.0.34",
+    "es6-promise": "^4.1.1",
+    "express": "^4.16.2",
+    "fbjs": "^0.8.16",
+    "fs-extra": "^4.0.3",
+    "helmet": "^3.9.0",
+    "history": "^4.7.2",
+    "hoverintent": "^2.0.0",
+    "htmlparser2": "^3.9.2",
+    "immutable": "^3.8.2",
+    "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.4",
+    "mdi": "^2.0.46",
+    "memoizee": "^0.4.11",
+    "moment": "^2.19.3",
+    "moment-timezone": "^0.5.14",
+    "postcss-flexbugs-fixes": "^3.2.0",
+    "postcss-loader": "^2.0.9",
+    "prop-types": "^15.6.0",
+    "raf": "^3.4.0",
+    "raven": "^2.3.0",
+    "raven-js": "^3.20.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-helmet": "^5.2.0",
+    "react-motion": "^0.5.2",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "5.0.0-alpha.8",
+    "reading-time": "^1.1.0",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "sanitize-filename": "^1.6.1",
+    "sanitize-html": "^1.16.3",
+    "shallowequal": "^1.0.2",
+    "shhh": "^1.0.3",
+    "srcset": "^1.0.0",
+    "striptags": "2",
+    "wpapi": "git+https://git@github.com/Audentio/node-wpapi.git",
+    "xml-js": "^1.6.1",
+    "xtend": "^4.0.1"
+  }
+}

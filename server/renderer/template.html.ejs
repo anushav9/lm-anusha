@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="<%- htmlClass %>">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <%- head.meta.toString() %>
+    <%- head.title.toString() %>
+    <%- head.base.toString() %>
+    <%- head.link.toString() %>
+
+    <%# start preloading JS files %>
+    <link rel="preload" as="script" href="/assets/modernizr.js">
+    <link rel="preload" as="script" href="/dist/main.js?v=<%= version %>">
+
+    <%# core CSS %>
+    <style type="text/css">
+        <%- core_css %>
+        /* -- */
+    </style>
+
+    <%# main stylesheet %>
+    <link rel="stylesheet" type="text/css" href="/dist/styles.css?v=<%= version %>">
+</head>
+
+<body>
+    <%# For the paranoids %>
+    <noscript class="noscript">
+        This website was built using modern web technologies. You must enable JavaScript to use it.
+    </noscript>
+
+    <%# Pre-rendered app root. React will mount over this %>
+    <div id="root"><%- appHTML %></div>
+
+    <script>
+        <%# redux store state with data fetched on server %>
+        window.__PRELOADED_STATE__ = <%- JSON.stringify(preloadedState).replace(/</g, '\\u003c') %>;
+    </script>
+
+    <script defer src="/assets/modernizr.js"></script>
+    <script defer src="/dist/main.js?v=<%= version %>"></script>
+</body>
+</html>
