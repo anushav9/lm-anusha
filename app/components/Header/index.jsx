@@ -34,21 +34,21 @@ export default class Header extends Component {
                 <Container className={style.container}>
 
                     <div className={style.header__logo}>
-                        <img className={style.logo} src="../../assets/images/logo_white.png" alt="LaundryMate"/>
+                    <a href="http://localhost:5000"><img className={style.logo} src="../../assets/images/logo_white.png" alt="LaundryMate"/></a>
                     </div>
 
                     <div className={style.header__nav} id="navHeader">
                         <div className={classy(style.header__navList)}>
                             <ul className={classy(style.navList, style.horiz)}>
-                                
+
                                 <li className={style.navList__item}>
-                                    <a className={style.navList__link} href="#">Locations</a>
+                                    <a className={style.navList__link} href="http://localhost:5000/locations">Locations</a>
                                 </li>
                                 <li className={classy(style.navList__item, style.navList__item__disabled)}>
-                                    <a className={style.navList__link} href="#">Order</a>
+                                    <a className={classy(style.navList__link, style.tooltip)} href="#">Order<span className={style.tooltiptext}>comming soon</span></a>
                                 </li>
                                 <li className={style.navList__item}>
-                                    <a className={style.navList__link} href="#"><i className="mdi mdi-lock"></i> Partner Login</a>
+                                    <a className={style.navList__link} href="https://dashboard.laundrymate.io/"><i className="mdi mdi-lock"></i> Partner Login</a>
                                 </li>
                                 <li className={classy(style.navList__item, style.navList__item__button)}>
                                     <a className={classy(style.button, style.button__primary)} href="#">Download</a>

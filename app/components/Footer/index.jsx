@@ -43,16 +43,16 @@ export default class Footer extends Component {
                 <div>
                     <ul className={style.navList}>
                         <li className={style.navList__item}>
-                            <a className={style.navList__link} href="#">Laundromat</a>
+                            <a className={style.navList__link} href="http://localhost:5000/laundromat">Laundromat</a>
                         </li>
                         <li className={style.navList__item}>
-                            <a className={style.navList__link} href="#">Dry Cleaner</a>
+                            <a className={style.navList__link} href="http://localhost:5000/dry-cleaner">Dry Cleaner</a>
                         </li>
                         <li className={style.navList__item}>
-                            <a className= {style.navList__link} href="#">Tailor</a>
+                            <a className= {style.navList__link} href="http://localhost:5000/tailor">Tailor</a>
                         </li>
                         <li className={style.navList__item}>
-                            <a className={style.navList__link} href="#">Locations</a>
+                            <a className={style.navList__link} href="http://localhost:5000/locations">Locations</a>
                         </li>
                     </ul>
                 </div>
@@ -63,10 +63,10 @@ export default class Footer extends Component {
                 <div>
                     <ul  className={style.navList}>
                         <li className={style.navList__item}>
-                            <a className={style.navList__link} href="#">Partner Login</a>
+                            <a className={style.navList__link} href="https://dashboard.laundrymate.io/">Partner Login</a>
                         </li>
                         <li className={style.navList__item}>
-                            <a className={style.navList__link} href="#">Become a Partner</a>
+                            <a className={style.navList__link} href="http://localhost:5000/contact-form ">Become a Partner</a>
                         </li>
                     </ul>
                 </div>

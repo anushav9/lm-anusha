@@ -15,12 +15,12 @@ export default class AppStoreButtons extends Component {
                    <ul className={this.props.type=='horiz' ? style.horiz : undefined}>
 
                        <li className={style.navList__item}>
-                           <a className={style.navList__link} href="#">
+                           <a className={style.navList__link} href="https://itunes.apple.com/us/app/laundrymate-io/id1263972500">
                                <img src={appStore} className={style.appStoreButton} alt="Download on the AppStore"/>
                            </a>
                        </li>
                        <li className={style.navList__item}>
-                           <a className={style.navList__link} href="#">
+                           <a className={style.navList__link} href=" https://play.google.com/store/apps/details?id=io.laundrymate.user">
                                <img src={googlePlay} className={style.appStoreButton} alt="Get it on Google Play"/>
                            </a>
                        </li>

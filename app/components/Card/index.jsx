@@ -7,8 +7,10 @@ export default class Card extends Component {
     render() {
 
         return (
+            <a href={this.props.link}>
             <Grid_Cell md={4} style={{padding:'0px 15px'}}>
-                <div style={this.props.style} className={classy(this.props.className, style.card,
+
+                <div style={this.props.style}  className={classy(this.props.className, style.card,
                     this.props.type == 'washing' && style.card__washing,
                     this.props.type == 'drycleaning' && style.card__drycleaning,
                     this.props.type == 'tailoring' && style.card__tailoring)}
@@ -33,7 +35,9 @@ export default class Card extends Component {
                             </div>
 
                         </div>
+
                     </Grid_Cell>
+                    </a>
                 );
             }
         }

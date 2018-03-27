@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { Page, Header, Button, Heading, Anchor,Card, Container, Grid, Grid_Cell, Section,StepsSection,ServiceCoverageArea, StepsList, MainPageHero, FinalCTA, SectionHeader, AppStoreButtons, Paragraph, Media, Footer, MainFooter } from 'components';
+import { Page, Header, Button, Heading, Anchor,Card, Container, Grid, Grid_Cell, Section,StepsSection,ServiceCoverageArea, StepsList, MainPageHero, MobileAppSection,FinalCTA, SectionHeader, AppStoreButtons, Paragraph, Media, Footer, MainFooter } from 'components';
 import { classy } from 'utils';
 import style from './style.scss';
 import heroImage from '../../assets/images/user-hero.jpg';
@@ -60,10 +60,10 @@ export default class Home extends Component {
 
                     <Section>
 
-                            <ServiceCoverageArea
-                                text="Whether you are at home or out of town, LaundryMate helps you find the best laundry services, while allowing you to make purchases off of your phone."
-                                >
-                                </ServiceCoverageArea>
+                        <ServiceCoverageArea
+                            text="Whether you are at home or out of town, LaundryMate helps you find the best laundry services, while allowing you to make purchases off of your phone."
+                            >
+                            </ServiceCoverageArea>
 
                             <StepsSection
                                 image={stepsImage}
@@ -87,65 +87,45 @@ export default class Home extends Component {
                                 >
                                 </FinalCTA>
 
-                                <Section className={style.aboutTheMobileApp}>
+                                <MobileAppSection></MobileAppSection>
+
+                                <Section className={style.servicesOfferedCards} size="large">
                                     <Container>
-                                        <Grid className={style.grid}>
-                                            <Grid_Cell sm={12} md={6}>
-                                                <div className={style.aboutTheMobileApp__image}>
-                                                    <img  src="../../assets/images/devices.png" alt="Mobile app screenshots"/>
-                                                </div>
-                                            </Grid_Cell>
-
-                                            <Grid_Cell sm={12} md={6}>
-                                                <div className={style.aboutTheMobileApp__content}>
-                                                    <SectionHeader
-                                                        title="Simple and easy process"
-                                                        subtitle="Schedule in seconds"
-                                                        >
-                                                        </SectionHeader>
-
-                                                        <Paragraph>With a few simple clicks you will have your clothes cleaned in no time. LaundryMate offers different features from having your clothes cleaned to tailoring, ironing and so much more.</Paragraph>
-                                                    </div>
-                                                </Grid_Cell>
-
-                                            </Grid>
-                                        </Container>
-                                    </Section>
-
-                                    <Section className={style.servicesOfferedCards} size="large">
-                                        <Container>
-                                            <Grid className={style.card__row}>
+                                        <Grid className={style.card__row}>
+                                            <Card
+                                                link="http://localhost:5000/locations"
+                                                type="washing"
+                                                title="Need washed clothes?"
+                                                link="Learn more"
+                                                href="#"
+                                                ></Card>
                                                 <Card
-                                                    type="washing"
-                                                    title="Need washed clothes?"
+                                                    link="http://localhost:5000/dry-cleaner"
+                                                    type="drycleaning"
+                                                    title="Need dry cleaning?"
                                                     link="Learn more"
                                                     href="#"
                                                     ></Card>
                                                     <Card
-                                                        type="drycleaning"
-                                                        title="Need dry cleaning?"
+                                                        link="http://localhost:5000/tailor"
+                                                        type="tailoring"
+                                                        title="Need tailoring?"
                                                         link="Learn more"
                                                         href="#"
                                                         ></Card>
-                                                        <Card
-                                                            type="tailoring"
-                                                            title="Need tailoring?"
-                                                            link="Learn more"
-                                                            href="#"
-                                                            ></Card>
-                                                        </Grid>
-                                                    </Container>
-                                                </Section>
+                                                    </Grid>
+                                                </Container>
+                                            </Section>
 
-                                                <Section type="banner" color="primary">
-                                                    <Container>
-                                                        <Heading kind='h2' color="white" weight="lighter">Download LaundryMate App</Heading>
-                                                        <Paragraph>Our app is available for free</Paragraph>
-                                                        <AppStoreButtons type='horiz'></AppStoreButtons>
-                                                    </Container>
-                                                </Section>
+                                            <Section type="banner" color="primary">
+                                                <Container>
+                                                    <Heading kind='h2' color="white" weight="lighter">Download LaundryMate App</Heading>
+                                                    <Paragraph>Our app is available for free</Paragraph>
+                                                    <AppStoreButtons type='horiz'></AppStoreButtons>
+                                                </Container>
+                                            </Section>
 
-                                            </Page>
-                                        );
-                                    }
+                                        </Page>
+                                    );
                                 }
+                            }
