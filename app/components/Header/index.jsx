@@ -34,7 +34,7 @@ export default class Header extends Component {
                 <Container className={style.container}>
 
                     <div className={style.header__logo}>
-                    <a href="http://localhost:5000"><img className={style.logo} src="../../assets/images/logo_white.png" alt="LaundryMate"/></a>
+                    <a href="/"><img className={style.logo} src="../../assets/images/logo_white.png" alt="LaundryMate"/></a>
                     </div>
 
                     <div className={style.header__nav} id="navHeader">
@@ -42,7 +42,7 @@ export default class Header extends Component {
                             <ul className={classy(style.navList, style.horiz)}>
 
                                 <li className={style.navList__item}>
-                                    <a className={style.navList__link} href="http://localhost:5000/locations">Locations</a>
+                                    <a className={style.navList__link} href="/locations">Locations</a>
                                 </li>
                                 <li className={classy(style.navList__item, style.navList__item__disabled)}>
                                     <a className={classy(style.navList__link, style.tooltip)} href="#">Order<span className={style.tooltiptext}>comming soon</span></a>

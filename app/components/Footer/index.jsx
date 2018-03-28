@@ -43,16 +43,16 @@ export default class Footer extends Component {
                 <div>
                     <ul className={style.navList}>
                         <li className={style.navList__item}>
-                            <a className={style.navList__link} href="http://localhost:5000/laundromat">Laundromat</a>
+                            <a className={style.navList__link} href="/laundromat">Laundromat</a>
                         </li>
                         <li className={style.navList__item}>
-                            <a className={style.navList__link} href="http://localhost:5000/dry-cleaner">Dry Cleaner</a>
+                            <a className={style.navList__link} href="/dry-cleaner">Dry Cleaner</a>
                         </li>
                         <li className={style.navList__item}>
-                            <a className= {style.navList__link} href="http://localhost:5000/tailor">Tailor</a>
+                            <a className= {style.navList__link} href="/tailor">Tailor</a>
                         </li>
                         <li className={style.navList__item}>
-                            <a className={style.navList__link} href="http://localhost:5000/locations">Locations</a>
+                            <a className={style.navList__link} href="/locations">Locations</a>
                         </li>
                     </ul>
                 </div>
@@ -66,7 +66,7 @@ export default class Footer extends Component {
                             <a className={style.navList__link} href="https://dashboard.laundrymate.io/">Partner Login</a>
                         </li>
                         <li className={style.navList__item}>
-                            <a className={style.navList__link} href="http://localhost:5000/contact-form ">Become a Partner</a>
+                            <a className={style.navList__link} href="/contact-form ">Become a Partner</a>
                         </li>
                     </ul>
                 </div>
