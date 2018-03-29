@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import style from './style.scss';
 import { classy } from 'utils';
-import { Heading,Anchor,Grid,Grid_Cell} from 'components';
+import { Heading,Anchor} from 'components';
 
 export default class Card extends Component {
     render() {
 
         return (
-            <a href={this.props.link}>
-            <Grid_Cell md={4} style={{padding:'0px 15px'}}>
 
                 <div style={this.props.style}  className={classy(this.props.className, style.card,
                     this.props.type == 'washing' && style.card__washing,
@@ -31,13 +30,12 @@ export default class Card extends Component {
                             </div>
 
                             <div className={style.card__footer}>
-                                <Anchor className={style.card__link} href={this.props.href}>{this.props.link} <i className="mdi mdi-chevron-right"></i></Anchor>
+                                <span className={style.card__link}>{this.props.link} <i className="mdi mdi-chevron-right"></i></span>
                             </div>
 
                         </div>
 
-                    </Grid_Cell>
-                    </a>
+
                 );
             }
         }

@@ -28,7 +28,7 @@ export default class Laundromat extends Component {
         return (
             <Page>
 
-
+                <Header headerOnNextSection='true' headerOnImage='true'/>
                 <MainPageHero
                     bgImage = {heroImage}
                     title = 'Reach thousands of new customers'
@@ -57,7 +57,7 @@ export default class Laundromat extends Component {
 
                     <DriverAppSection/>
                     <PartnerShipCTA title="Start profiting as a laundromat"></PartnerShipCTA>
-                    
+
                 </Page>
             );
         }

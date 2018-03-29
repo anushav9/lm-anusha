@@ -6,7 +6,7 @@ export default class Page extends Component {
         return (
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>My Title</title>
+                <title>LaundryMate</title>
             </Helmet>
         );
     }

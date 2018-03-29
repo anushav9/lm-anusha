@@ -33,6 +33,8 @@
      text-transform: uppercase;
      box-shadow: 0 6px 20px 0 rgba(0,0,0,0.15);
      color: $white;
+     font-weight: bold;
+
 
      @include tablet {
           margin-left: 10px;
@@ -46,7 +48,7 @@
      display: inline-block;
 }
 
-.button-submit {
+.button__submit {
      height: 45px;
      width: 115px;
      border-radius: 4px;

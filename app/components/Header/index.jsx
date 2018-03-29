@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import style from './style.scss';
 import { classy } from 'utils';
 import { Container, Section, Heading, Button, AppStoreButtons} from 'components';
@@ -6,6 +7,18 @@ import { Container, Section, Heading, Button, AppStoreButtons} from 'components'
 
 
 export default class Header extends Component {
+
+    static propTypes = {
+        children: PropTypes.any,
+        headerOnNextSection: PropTypes.bool,
+        headerOnImage: PropTypes.bool,
+    }
+
+    // static defaultProps = {
+    //     kind: 'h1',
+    //     upper: false,
+    // }
+    //
     constructor() {
         super();
         this.state = {
@@ -29,7 +42,7 @@ export default class Header extends Component {
     render() {
 
         return (
-            <header className={classy(style.header, style.headerOnNextSection, style.headerOnImage, this.state.responsiveMenu && style.responsiveMenu)}>
+            <header className={classy(style.header, this.props.headerOnNextSection && style.headerOnNextSection, this.props.headerOnImage && style.headerOnImage, this.state.responsiveMenu && style.responsiveMenu)}>
                 <div className={style.mask} onClick={this.closeMenu} />
                 <Container className={style.container}>
 

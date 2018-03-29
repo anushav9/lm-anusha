@@ -1,0 +1,25 @@
+@import "theme";
+@import "buttons";
+
+.grid{
+
+    @include screen-md {
+        padding-top: 35px;
+    }
+
+    @include desktop {
+        padding-top: 55px;
+    }
+
+}
+.input {
+    background-color: #E6E9EE;
+    border-radius: 4px;
+}
+
+.button__notified {
+    margin-top: 20px;
+    @include screen-xl {
+        margin-top: 5px;
+    }
+}

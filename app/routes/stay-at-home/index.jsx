@@ -50,7 +50,7 @@ export default class StayAtHome extends Component {
         ]
         return (
             <Page>
-
+                <Header headerOnNextSection='true' headerOnImage='true'/>
                 <MainPageHero
                     bgImage = {heroImage}
                     title = "Dry cleaning & laundry to your door"
@@ -89,7 +89,7 @@ export default class StayAtHome extends Component {
                                 >
                                 </FinalCTA>
                                 <MobileAppSection></MobileAppSection>
-                                
+
 
 
                                 <Section type="banner" color="primary">

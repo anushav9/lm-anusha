@@ -26,7 +26,7 @@ export default class Drycleaner extends Component {
         ]
             return (
         <Page>
-
+            <Header headerOnNextSection='true' headerOnImage='true'/>
             <MainPageHero
                 bgImage = {heroImage}
                 title = 'Reach thousands of new customers'
@@ -48,7 +48,7 @@ export default class Drycleaner extends Component {
             <DashBoardForBusiness/>
 
             <StepsSection
-                image={stepsImage}
+                bgImage={stepsImage}
                 heading="Quick steps to get started"
                 steps={steps}
                 >

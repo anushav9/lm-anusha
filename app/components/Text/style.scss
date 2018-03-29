@@ -1,0 +1,33 @@
+@import 'theme';
+
+.dim {
+    color: $color-dimmedText;
+}
+
+.block {
+    display: block;
+}
+
+.large {
+    font-size: $font-size-medium;
+}
+
+.small {
+    font-size: $font-size-small;
+}
+
+.smaller {
+    font-size: 1.2rem;
+}
+
+.margin {
+    margin-bottom: $gutter;
+}
+
+.bold {
+    font-weight: $font-weight-bold;
+}
+
+.semibold {
+    font-weight: $font-weight-semibold;
+}

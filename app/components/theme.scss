@@ -63,6 +63,18 @@ $breakpoint-hd-desktop: 1280px;
   }
 }
 
+@mixin screen-md {
+  @media (min-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin screen-xl {
+  @media (min-width: #{$screen-xl}) {
+    @content;
+  }
+}
+
 
 /* declaration-block-semicolon */
 $gutter-sm: 10px;

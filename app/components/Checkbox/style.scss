@@ -1,0 +1,27 @@
+@import 'theme';
+
+.checkbox {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.icon {
+    display: inline-block;
+    line-height: normal;
+    position: relative;
+    top: -1px;
+    width:30px;
+
+    &:focus {
+        outline: none;
+        color: $color-primary;
+        // outline: 1px solid $color-primary;
+        // outline-offset: 1px;
+    }
+    
+
+    .checked & {
+        color: $palette-lightBlue500;
+
+    }
+}

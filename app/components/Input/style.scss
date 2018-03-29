@@ -1,0 +1,172 @@
+@import 'theme';
+
+.container {
+    font-size: $font-size;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    margin: 15px;
+    padding-right: 20px;
+
+    &--textarea {
+        display: block;
+    }
+
+    &--stretch {
+        display: block;
+        width: 100%;
+    }
+
+    &--block {
+        width: 100%;
+        display: block;
+        margin-bottom: $gutter;
+    }
+
+    &--large {
+        font-size: $font-size-large;
+    }
+}
+
+.label {
+    font-size: 0.9em;
+    text-align: left;
+    display: inline-block;
+    color: $color-dimmedText;
+    cursor: pointer;
+
+    .container--focus &,
+    &:hover {
+        color: $color-darkText;
+    }
+
+    .container--isFetching &,
+    .container--disabled & {
+        // opacity: 0.7;
+        pointer-events: none;
+    }
+
+    .container--textarea & {
+        margin-bottom: 4px;
+    }
+}
+
+.container--square .label {
+    margin-bottom: 0.3em;
+}
+
+.labelInline {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    line-height: 3.4rem;
+    font-size: inherit;
+}
+
+.inputwrapper {
+    position: relative;
+    font-family: inherit;
+}
+
+.input {
+    height: 3.4rem;
+    font-size: inherit;
+    // border: 0;
+    outline: none;
+    // border-bottom: 1px solid darken($color-border, 2%);
+    width: 100%;
+    // background: transparent;
+    -webkit-appearance: none;
+    // border-radius: 0;
+    font-family: $font-family-system;
+
+    .container--disabled & {
+        cursor: not-allowed;
+        // border-bottom-style: dotted;
+        color: $color-dimmedText;
+    }
+
+    &:focus {
+        border-bottom-color: $color-primary;
+    }
+
+    &--textarea {
+        max-width: 100%;
+        resize: vertical;
+        display: block;
+        min-height: 100px;
+        // border: 2px solid $color-border;
+        border-radius: $radius;
+        // padding: 15px;
+        // background-color: $color-secondaryContent;
+        -webkit-appearance: none;
+        line-height: 1.6;
+
+        &:focus {
+            border-color: $color-primary;
+        }
+    }
+
+    .container--large & {
+        height: 5rem;
+    }
+
+    .container--icon-left & {
+        padding-left: 1.6em;
+    }
+
+    .container--icon-right & {
+        padding-right: 1.6em;
+    }
+
+    .container--labelInline & {
+        text-indent: 150px;
+    }
+
+    .container--square & {
+        background-color: #fff;
+        border: 1px solid $color-border;
+        text-indent: 10px;
+
+        &:focus {
+            border-color: $color-primary;
+        }
+    }
+
+    .container--error & {
+        border-color: $color-danger;
+    }
+}
+
+.input::placeholder {
+    opacity: 0.4;
+    color: $color-secondaryText;
+    padding:10px;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    font-size: 1.2em;
+    margin-top: -0.6em;
+    left: 0;
+    line-height: normal;
+    color: $color-general;
+
+    .container--focus & {
+        color: $color-darkText;
+    }
+
+    .container--icon-right & {
+        left: auto;
+        right: 0;
+    }
+}
+
+.error {
+    font-size: $font-size-small;
+    color: $color-danger;
+    margin-top: 5px;
+}

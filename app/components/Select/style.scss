@@ -1,0 +1,102 @@
+@import 'theme';
+
+.select {
+    // background: white;
+    background: $color-secondaryBackground;
+    // box-shadow: $shadow-1;
+    // border-bottom: 2px solid $color-border;
+    border-radius: 4px;
+    position: relative;
+    display: inline-block;
+    // min-width: 200px;
+    cursor: pointer;
+    width:100%;
+
+    i {
+        float: right;
+        margin-left: $gutter-sm;
+        line-height: normal;
+        opacity: 0.5;
+    }
+
+    &:hover i {
+        opacity: 1;
+    }
+
+    &--large {
+        font-size: $font-size-medium;
+    }
+
+    &--block {
+        margin-bottom: $gutter;
+        display: block;
+        // width: 100%;
+
+        i {
+            font-size: 1.7rem;
+            vertical-align: middle;
+        }
+    }
+}
+
+.value {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: $gutter-sm;
+
+    .select--large & {
+        padding: $gutter;
+    }
+}
+
+.options {
+    position: absolute;
+    background: white;
+    // border: 1px solid $color-border;
+    border-top: 0;
+    border-bottom: 0;
+    box-shadow: $shadow-2;
+    width: 100%;
+    box-sizing: content-box;
+    top: 100%;
+    left: 0;
+    display: none;
+    z-index: 90;
+    margin-top: 1px;
+    margin-left: -1px;
+    max-height: 300px;
+    overflow-y: auto;
+
+    .select--open & {
+        display: block;
+    }
+}
+
+.option {
+    padding: $gutter-sm $gutter;
+    line-height: 1.4;
+
+    .select--large & {
+        padding: $gutter;
+    }
+
+    border-bottom: 1px solid lighten($color-border, 2%);
+    cursor: pointer;
+
+    &:last-child {
+        border-bottom: 0;
+    }
+
+    &:hover {
+        background: $color-secondaryContent;
+    }
+
+    &--active {
+        cursor: default;
+        box-shadow: 2px 0 0 0 $color-primary, -2px 0 0 0 $color-primary;
+        // font-weight: $font-weight-semibold;
+        background: $color-secondaryContent;
+    }
+}

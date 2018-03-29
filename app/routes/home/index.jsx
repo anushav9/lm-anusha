@@ -50,6 +50,7 @@ export default class Home extends Component {
         ]
         return (
             <Page>
+                <Header headerOnNextSection='true' headerOnImage='true'/>
                 <MainPageHero
                     bgImage = {heroImage}
                     title = "Dry cleaning & laundry to your door"
@@ -66,8 +67,8 @@ export default class Home extends Component {
                             </ServiceCoverageArea>
 
                             <StepsSection
-                                image={stepsImage}
-                                heading="Quick steps to get started"
+                                bgImage= {stepsImage}
+                                title="Quick steps to get started"
                                 steps={steps}
                                 >
                                 </StepsSection>
@@ -92,40 +93,43 @@ export default class Home extends Component {
                                 <Section className={style.servicesOfferedCards} size="large">
                                     <Container>
                                         <Grid className={style.card__row}>
-                                            <Card
-                                                link="http://localhost:5000/locations"
-                                                type="washing"
-                                                title="Need washed clothes?"
-                                                link="Learn more"
-                                                href="#"
-                                                ></Card>
+                                            <Grid_Cell md={4} className={style.grid__cell}>
                                                 <Card
-                                                    link="http://localhost:5000/dry-cleaner"
+                                                    src="/laundromat"
+                                                    type="washing"
+                                                    title="Need washed clothes?"
+                                                    link="Learn more"
+                                                />
+                                            </Grid_Cell>
+                                            <Grid_Cell md={4} className={style.grid__cell}>
+                                                <Card
+                                                    src="/dry-cleaner"
                                                     type="drycleaning"
                                                     title="Need dry cleaning?"
                                                     link="Learn more"
-                                                    href="#"
-                                                    ></Card>
-                                                    <Card
-                                                        link="http://localhost:5000/tailor"
-                                                        type="tailoring"
-                                                        title="Need tailoring?"
-                                                        link="Learn more"
-                                                        href="#"
-                                                        ></Card>
-                                                    </Grid>
-                                                </Container>
-                                            </Section>
+                                                />
+                                            </Grid_Cell>
+                                            <Grid_Cell md={4} className={style.grid__cell}>
+                                                <Card
+                                                    src="/tailor"
+                                                    type="tailoring"
+                                                    title="Need tailoring?"
+                                                    link="Learn more"
+                                                />
+                                            </Grid_Cell>
+                                        </Grid>
+                                    </Container>
+                                </Section>
 
-                                            <Section type="banner" color="primary">
-                                                <Container>
-                                                    <Heading kind='h2' color="white" weight="lighter">Download LaundryMate App</Heading>
-                                                    <Paragraph>Our app is available for free</Paragraph>
-                                                    <AppStoreButtons type='horiz'></AppStoreButtons>
-                                                </Container>
-                                            </Section>
+                                    <Section type="banner" color="primary">
+                                        <Container>
+                                            <Heading kind='h2' color="white" weight="lighter">Download LaundryMate App</Heading>
+                                            <Paragraph>Our app is available for free</Paragraph>
+                                            <AppStoreButtons type='horiz'></AppStoreButtons>
+                                        </Container>
+                                    </Section>
 
-                                        </Page>
+                                </Page>
                                     );
                                 }
                             }

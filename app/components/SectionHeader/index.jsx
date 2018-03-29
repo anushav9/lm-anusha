@@ -7,7 +7,7 @@ export default class SectionHeader extends Component {
      render() {
 
           return (
-               <div style={this.props.style} className={classy(this.props.className, style.section,this.props.align =='center' && style.align__center)}>
+               <div style={this.props.style} className={classy(this.props.className, style.section,this.props.align =='center' && style.align__center, this.props.hasBorder == 'true' && style.headerWithBorder)}>
                     {this.props.title &&
                    <Heading kind="h3">{this.props.title}</Heading>
                }

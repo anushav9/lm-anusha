@@ -1,21 +1,9 @@
 @import 'theme';
 
 .container {
-    max-width: 576px;
+    max-width: 1140px;
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
-
-    @include tablet {
-        max-width: 720px;
-    }
-
-    @include desktop {
-        max-width: 960px;
-    }
-
-    @include hd-desktop {
-        max-width: 1140px;
-    }
 }

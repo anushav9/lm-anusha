@@ -58,11 +58,16 @@ export default class RootContainer extends Component {
         }
 
         return [
-            <Helmet titleTemplate="%s | My Project" key="helmet">
+            <Helmet titleTemplate="LaundryMate" key="helmet">
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
-                <title>My Project</title>
+                <link rel="shortcut icon" href="../assets/images/favicomatic/favicon.ico" type="image/x-icon" />
+                <title>LaundryMate</title>
+                <title>The Rock (1996)</title>
+                <meta property="og:title" content="LaundryMate" />
+                <meta property="og:type" content="website" />
+                {/* <meta property="og:url" content="http://www.imdb.com/title/tt0117500/" /> */}
+                <meta property="og:image" content="../assets/images/Open Graph/open-graph.jpg" />
 
                 <base href="/" />
 

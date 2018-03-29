@@ -15,7 +15,7 @@ export default class Grid extends Component {
     }
 
     static defaultProps = {
-        gutter: 0,
+        gutter: 15,
     }
 
     shouldComponentUpdate = pureRender

@@ -41,7 +41,7 @@ export default class Grid_Cell extends Component {
 
         return (
             <div className={classy(this.getClassName(), cellClass)} style={CellStyle}>
-                <div style={styleProp} className={classNameProp}>
+                <div style={styleProp} className={classy(style.gridWrap, classNameProp)}>
                     {children}
                 </div>
             </div>

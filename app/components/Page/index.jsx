@@ -16,7 +16,6 @@ export default class Page extends Component {
                 )}
                 style={inlineStyle}
             >
-                <Header/>
                 {children}
                 <Footer/>
                 <MainFooter/>

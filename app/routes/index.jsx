@@ -7,13 +7,7 @@ import { Route, Switch } from 'react-router-dom';
 export default (
     <RootContainer>
         <Switch>
-            <Redirect
-                exact
-                from="/redirect-example"
-                to="https://audent.io"
-                // to="/some-page"
-            />
-
+            
             <Route
                 exact
                 path="/"
@@ -48,6 +42,12 @@ export default (
                exact
                path="/locations"
                component={require('routes/locations').default}
+            />
+
+            <Route
+               exact
+               path="/become-a-partner"
+               component={require('routes/become-a-partner').default}
             />
         </Switch>
     </RootContainer>
