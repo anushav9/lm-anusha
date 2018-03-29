@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import style from './style.scss';
 import { classy } from 'utils';
 
 export default class Section extends Component {
+    static propTypes = {
+        type: PropTypes.string,
+        size: PropTypes.string,
+        color: PropTypes.string,
+        hasHeader: PropTypes.bool,
+        mask: PropTypes.bool,
+        children: PropTypes.any
+    }
 
      render() {
 

@@ -69,7 +69,7 @@ export default class StayAtHome extends Component {
 
                             <StepsSection
                                 image={stepsImage}
-                                heading="Quick steps to get started"
+                                title="Quick steps to get started"
                                 steps={steps}
                                 >
                                 </StepsSection>

@@ -11,6 +11,7 @@ export default class BecomeAPartner extends Component {
 
         return (
             <Page>
+                <Header/>
                 <Section color='primary'>
                     <Container>
                         <Heading kind="h1" color="white" className={style.heading}>Become a Partner</Heading>

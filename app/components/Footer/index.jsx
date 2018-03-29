@@ -20,68 +20,56 @@ export default class Footer extends Component {
                             <div className={style.socialMediaIcons}>
                                 <ul className={classy(style.navList,style.horiz,this.props.className)}>
                                     <li className={classy(style.navList__item, style.socialMediaIcons__item__facebook)}>
-                                        <a className={style.navList__link} href="https://www.facebook.com" target="_blank">
-                                        <i className="mdi mdi-facebook"></i>
-                                    </a>
+                                        <a className={style.navList__link} href="https://www.facebook.com/LaundryMate-486250308423066/" target="_blank"><img src="../../assets/images/find-us-on-facebook.svg"/></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </Grid_Cell>
+
+                    <Grid_Cell className={style.footer__item} sm={6} md={3}>
+                        <Heading kind='h4'>LaundryMate</Heading>
+                        <div>
+                            <ul className={style.navList}>
+                                <li className={style.navList__item}>
+                                    <a className={style.navList__link} href="/laundromat">Laundromat</a>
                                 </li>
-                                <li className={classy(style.navList__item, style.socialMediaIcons__item__twitter)}>
-                                    <a className={style.navList__link} href="https://www.twitter.com" target="_blank">
-                                    <i className="mdi mdi-twitter"></i>
-                                </a>
-                            </li>
-                            <li className={classy(style.navList__item, style.socialMediaIcons__item__gmail)}>
-                                <a className={style.navList__link} href="https://www.gmail.com" target="_blank">
-                                <i className="mdi mdi-email"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </Grid_Cell>
+                                <li className={style.navList__item}>
+                                    <a className={style.navList__link} href="/dry-cleaner">Dry Cleaner</a>
+                                </li>
+                                <li className={style.navList__item}>
+                                    <a className= {style.navList__link} href="/tailor">Tailor</a>
+                                </li>
+                                <li className={style.navList__item}>
+                                    <a className={style.navList__link} href="/locations">Locations</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </Grid_Cell>
 
-            <Grid_Cell className={style.footer__item} sm={6} md={3}>
-                <Heading kind='h4'>LaundryMate</Heading>
-                <div>
-                    <ul className={style.navList}>
-                        <li className={style.navList__item}>
-                            <a className={style.navList__link} href="/laundromat">Laundromat</a>
-                        </li>
-                        <li className={style.navList__item}>
-                            <a className={style.navList__link} href="/dry-cleaner">Dry Cleaner</a>
-                        </li>
-                        <li className={style.navList__item}>
-                            <a className= {style.navList__link} href="/tailor">Tailor</a>
-                        </li>
-                        <li className={style.navList__item}>
-                            <a className={style.navList__link} href="/locations">Locations</a>
-                        </li>
-                    </ul>
-                </div>
-            </Grid_Cell>
+                    <Grid_Cell className={style.footer__item} sm={6} md={3}>
+                        <Heading kind='h4'>Partners</Heading>
+                        <div>
+                            <ul  className={style.navList}>
+                                <li className={style.navList__item}>
+                                    <a className={style.navList__link} href="https://dashboard.laundrymate.io/">Partner Login</a>
+                                </li>
+                                <li className={style.navList__item}>
+                                    <a className={style.navList__link} href="/become-a-partner">Become a Partner</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </Grid_Cell>
 
-            <Grid_Cell className={style.footer__item} sm={6} md={3}>
-                <Heading kind='h4'>Partners</Heading>
-                <div>
-                    <ul  className={style.navList}>
-                        <li className={style.navList__item}>
-                            <a className={style.navList__link} href="https://dashboard.laundrymate.io/">Partner Login</a>
-                        </li>
-                        <li className={style.navList__item}>
-                            <a className={style.navList__link} href="/contact-form ">Become a Partner</a>
-                        </li>
-                    </ul>
-                </div>
-            </Grid_Cell>
+                    <Grid_Cell className={style.footer__item} sm={6} md={3}>
+                        <Heading kind='h4'>Get the App</Heading>
+                        <AppStoreButtons></AppStoreButtons>
+                    </Grid_Cell>
 
-            <Grid_Cell className={style.footer__item} sm={6} md={3}>
-                <Heading kind='h4'>Get the App</Heading>
-                <AppStoreButtons></AppStoreButtons>
-            </Grid_Cell>
-
-        </Grid>
-    </Container>
-</Section>
+                </Grid>
+            </Container>
+        </Section>
 
 
-);
+    );
 }
 }

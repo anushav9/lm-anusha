@@ -6,7 +6,6 @@
      padding: 0 10px;
      border-radius: 4px;
      text-align: center;
-     font-weight: bold;
 
      &:hover {
           color: $white;
@@ -33,9 +32,6 @@
      text-transform: uppercase;
      box-shadow: 0 6px 20px 0 rgba(0,0,0,0.15);
      color: $white;
-     font-weight: bold;
-
-
      @include tablet {
           margin-left: 10px;
      }

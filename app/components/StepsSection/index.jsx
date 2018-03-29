@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import style from './style.scss';
 import {Section,Container, Heading, Paragraph,Grid, Grid_Cell, StepsList} from 'components';
 
 export default class StepsSection extends Component {
+    static propTypes = {
+        title: PropTypes.string
+    }
+
     render() {
         return (
             <Section className={style.stepsToGetStarted}>
@@ -10,7 +15,7 @@ export default class StepsSection extends Component {
                     <Grid>
                         <Grid_Cell sm={12} md={6} lg={5}>
                             <div className={style.image}>
-                                <img  src="../../assets/images/user-photo.jpg"/>
+                                <img src={this.props.image}/>
                             </div>
                         </Grid_Cell>
                         <Grid_Cell  sm={12} md={6} lg={7}>
@@ -20,6 +25,7 @@ export default class StepsSection extends Component {
                             </div>
                         </Grid_Cell>
                     </Grid>
+
                 </Container>
             </Section>
         );

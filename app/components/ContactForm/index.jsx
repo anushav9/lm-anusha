@@ -75,7 +75,7 @@ export default class ContactForm extends Component {
             <Heading kind="h3">What services do you provide?</Heading>
             <Grid className={style.checkbox__grid}>
                 <Grid_Cell md={4}>
-                    <Checkbox checked='true'>Wash & Fold</Checkbox>
+                    <Checkbox>Wash & Fold</Checkbox>
                 </Grid_Cell>
 
                 <Grid_Cell md={4}>

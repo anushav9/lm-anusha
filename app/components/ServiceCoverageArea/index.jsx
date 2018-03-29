@@ -18,9 +18,9 @@ export default class StepsSection extends Component {
                                 <div className={style.mapCoverageArea__content}>
                                     <Paragraph color='$body-text-secondary'>{this.props.text}</Paragraph>
                                 </div>
-                                
+
                                 <div className={style.mapCoverageArea__footer}>
-                                    <Anchor>See all locations <i className="mdi mdi-chevron-right"></i></Anchor>
+                                    <a href="/locations">See all locations <i className="mdi mdi-chevron-right"></i></a>
                                 </div>
 
                             </Grid_Cell>

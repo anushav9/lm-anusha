@@ -1,26 +1,3 @@
-// import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
-// import { classy } from 'utils';
-// import style from './style.scss';
-//
-// export default class Section extends Component {
-//      render() {
-//
-//           return (
-//                <div>
-//                    {this.props.children}
-//                </div>
-//           )
-//      }
-// }
-
-
-/* Copyright <%= package.year %>, Audentio, LLC.
-* All rights reserved.
-*
-* LICENSE: <%= package.licence %>
-*/
-
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { classy } from 'utils';
@@ -30,31 +7,26 @@ export default class Paragraph extends Component {
 
     static propTypes = {
         children: PropTypes.any,
-        color: PropTypes.string,
         className: PropTypes.string,
-        noMargin: PropTypes.bool,
-        margin: PropTypes.bool,
+        secondary: PropTypes.bool,
+        light: PropTypes.bool,
+        large: PropTypes.bool, // large font-sie
     }
 
-    // static defaultProps = {
-    //     kind: 'h1',
-    //     upper: false,
-    // }
-
     render() {
-        const { kind: Tagname, margin, children, color,padding, noMargin, weight, style: inlineStyle, upper, preset, ...rest } = this.props;
+        const { children, className: classNameProp, secondary, light, white, large, ...props } = this.props;
+
         const className = classy(
-            style.heading,
-            // style['heading--' + Tagname],
-            color && style['paragraph--' + color],
-            padding && style['paragraph--fullPadding'],
-            noMargin && style['paragraph--noMargin'],
-            weight && style['paragraph--weight-' + weight],
-            this.props.className,
+            style.paragraph,
+            secondary && style['paragraph--secondary'],
+            light && style['paragraph--light'],
+            white && style['paragraph--white'],
+            large && style['paragraph--large'],
+            classNameProp,
         );
 
         return (
-            <div {...rest} style={inlineStyle} className={classy(style.paragraph, className)}>{children}</div>
+            <p {...props} className={className}>{children}</p>
         );
     }
 }

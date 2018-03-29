@@ -67,7 +67,7 @@ export default class Home extends Component {
                             </ServiceCoverageArea>
 
                             <StepsSection
-                                bgImage= {stepsImage}
+                                image= {stepsImage}
                                 title="Quick steps to get started"
                                 steps={steps}
                                 >
@@ -81,12 +81,14 @@ export default class Home extends Component {
                                 </Container>
                             </Section>
 
-                            <FinalCTA
+                            {/* Add FinalCTA later  */}
+
+                            {/* <FinalCTA
                                 text='Are you convinced yet? First time users get $10 credit.'
                                 buttontext='order online'
                                 background ='linear-gradient(270deg, #4DD0E1 0%, #2196F3 100%)'
                                 >
-                                </FinalCTA>
+                                </FinalCTA> */}
 
                                 <MobileAppSection></MobileAppSection>
 
@@ -95,7 +97,7 @@ export default class Home extends Component {
                                         <Grid className={style.card__row}>
                                             <Grid_Cell md={4} className={style.grid__cell}>
                                                 <Card
-                                                    src="/laundromat"
+                                                    href="/laundromat"
                                                     type="washing"
                                                     title="Need washed clothes?"
                                                     link="Learn more"
@@ -103,7 +105,7 @@ export default class Home extends Component {
                                             </Grid_Cell>
                                             <Grid_Cell md={4} className={style.grid__cell}>
                                                 <Card
-                                                    src="/dry-cleaner"
+                                                    href="/dry-cleaner"
                                                     type="drycleaning"
                                                     title="Need dry cleaning?"
                                                     link="Learn more"
@@ -111,7 +113,7 @@ export default class Home extends Component {
                                             </Grid_Cell>
                                             <Grid_Cell md={4} className={style.grid__cell}>
                                                 <Card
-                                                    src="/tailor"
+                                                    href="/tailor"
                                                     type="tailoring"
                                                     title="Need tailoring?"
                                                     link="Learn more"

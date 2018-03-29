@@ -50,12 +50,13 @@ export default class Laundromat extends Component {
 
                 <StepsSection
                     image={stepsImage}
-                    heading="Quick steps to get started"
+                    title="Quick steps to get started"
                     steps={steps}
                     >
                     </StepsSection>
 
                     <DriverAppSection/>
+                    
                     <PartnerShipCTA title="Start profiting as a laundromat"></PartnerShipCTA>
 
                 </Page>

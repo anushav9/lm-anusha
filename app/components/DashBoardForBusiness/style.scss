@@ -1,2 +1,8 @@
 @import 'icons';
 @import 'theme';
+
+.dashboardForBusiness__image{
+    @include screen-md{
+        padding-top: 60px;
+    }
+}

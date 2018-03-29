@@ -6,9 +6,9 @@ import { classy } from 'utils';
 import style from './style.scss';
 import heroImage from '../../assets/images/tailor-hero.jpg';
 import mobileAppImage from '../../assets/images/devices.png';
-import stepsImage from '../../assets/images/tailor-detail.jpg';
+import drycleanerImage from '../../assets/images/tailor-detail.jpg';
 
-export default class Drycleaner extends Component {
+export default class Tailor extends Component {
     render() {
         var steps = [
             {
@@ -48,15 +48,15 @@ export default class Drycleaner extends Component {
             <DashBoardForBusiness/>
 
             <StepsSection
-                bgImage={stepsImage}
-                heading="Quick steps to get started"
+                image={drycleanerImage}
+                title="Quick steps to get started"
                 steps={steps}
                 >
                 </StepsSection>
 
                 <DriverAppSection/>
 
-                <PartnerShipCTA title="Start profiting as a dry cleaner"></PartnerShipCTA>
+                <PartnerShipCTA title="Start profiting as a tailor"></PartnerShipCTA>
 
 
         </Page>

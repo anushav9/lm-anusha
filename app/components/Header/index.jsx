@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import style from './style.scss';
 import { classy } from 'utils';
-import { Container, Section, Heading, Button, AppStoreButtons} from 'components';
+import { Container, Section, Heading, Button, AppStoreButtons, ToolTip} from 'components';
 
 
 
@@ -14,11 +14,6 @@ export default class Header extends Component {
         headerOnImage: PropTypes.bool,
     }
 
-    // static defaultProps = {
-    //     kind: 'h1',
-    //     upper: false,
-    // }
-    //
     constructor() {
         super();
         this.state = {
@@ -58,14 +53,14 @@ export default class Header extends Component {
                                     <a className={style.navList__link} href="/locations">Locations</a>
                                 </li>
                                 <li className={classy(style.navList__item, style.navList__item__disabled)}>
-                                    <a className={classy(style.navList__link, style.tooltip)} href="#">Order<span className={style.tooltiptext}>comming soon</span></a>
+                                    <ToolTip tooltipText="coming soon"><a className={classy(style.navList__link)} href="#">Order</a></ToolTip>
                                 </li>
                                 <li className={style.navList__item}>
                                     <a className={style.navList__link} href="https://dashboard.laundrymate.io/"><i className="mdi mdi-lock"></i> Partner Login</a>
                                 </li>
-                                <li className={classy(style.navList__item, style.navList__item__button)}>
+                                {/* <li className={classy(style.navList__item, style.navList__item__button)}>
                                     <a className={classy(style.button, style.button__primary)} href="#">Download</a>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
 

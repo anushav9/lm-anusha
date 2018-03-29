@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import style from './style.scss';
-import {Section,Container, Heading,SectionHeader, Paragraph,Grid, Grid_Cell,LocationsList} from 'components';
+import {Section,Container, Heading,SectionHeader, Paragraph,Grid, Grid_Cell} from 'components';
 
 export default class ServiceLocations extends Component {
     render() {
         return (
             <Section size='large'>
                 <Container>
-                    <Grid>
-                        <LocationsList>
+                    <Grid gutter='45'>
+                        <Grid_Cell sm={6} md={4}>
                             <SectionHeader hasBorder='true' title='Dekalb County'></SectionHeader>
                             <div className={style.section__content}>
                                 <div className={style.navList}>
@@ -23,10 +23,10 @@ export default class ServiceLocations extends Component {
                                         </Grid_Cell>
                                     </Grid>
                                 </div>
-
                             </div>
-                        </LocationsList>
-                        <LocationsList>
+                        </Grid_Cell>
+
+                        <Grid_Cell sm={6} md={4}>
                             <SectionHeader title='DuPageCounty' hasBorder='true'></SectionHeader>
                             <div className={style.section__content}>
                                 <div className={style.navList}>
@@ -48,9 +48,9 @@ export default class ServiceLocations extends Component {
                                     </Grid>
                                 </div>
                             </div>
-                        </LocationsList>
+                        </Grid_Cell>
 
-                        <LocationsList>
+                        <Grid_Cell sm={6} md={4}>
                             <SectionHeader title='Kane County' hasBorder='true'></SectionHeader>
                             <div className={style.section__content}>
                                 <div className={style.navList}>
@@ -73,9 +73,9 @@ export default class ServiceLocations extends Component {
                                     </Grid>
                                 </div>
                             </div>
-                        </LocationsList>
+                        </Grid_Cell>
 
-                        <LocationsList>
+                        <Grid_Cell sm={6} md={4}>
                             <SectionHeader title='McHenry County' hasBorder='true'></SectionHeader>
                             <div className={style.section__content}>
                                 <div className={style.navList}>
@@ -99,9 +99,9 @@ export default class ServiceLocations extends Component {
                                     </Grid>
                                 </div>
                             </div>
-                        </LocationsList>
+                        </Grid_Cell>
 
-                        <LocationsList>
+                        <Grid_Cell sm={6} md={4}>
                             <SectionHeader title='Winnebago County' hasBorder='true'></SectionHeader>
                             <div className={style.section__content}>
                                 <div className={style.navList}>
@@ -116,9 +116,9 @@ export default class ServiceLocations extends Component {
                                     </Grid>
                                 </div>
                             </div>
-                        </LocationsList>
+                        </Grid_Cell>
 
-                        <LocationsList>
+                        <Grid_Cell sm={6} md={4}>
                             <SectionHeader title='Boone County' hasBorder='true'></SectionHeader>
                             <div className={style.section__content}>
                                 <div className={style.navList}>
@@ -132,7 +132,7 @@ export default class ServiceLocations extends Component {
                                     </Grid>
                                 </div>
                             </div>
-                        </LocationsList>
+                        </Grid_Cell>
                     </Grid>
                 </Container>
             </Section>
