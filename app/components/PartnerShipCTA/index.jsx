@@ -12,7 +12,7 @@ export default class PartnerShipCTA extends Component {
                         <Grid_Cell md={6}>
                             <div classname={style.driverAppSection__content}>
                             <Heading kind='h2' color='white'>{this.props.title}</Heading>
-                                <Paragraph>Signing up is easy and hassle free. Join the team today!</Paragraph>
+                                <Paragraph className={style.paragraph}>Signing up is easy and hassle free. Join the team today!</Paragraph>
                                 <Anchor className={classy(style.button, style.button__primary, style.button__large)} href="/become-a-partner">become a partner</Anchor>
                             </div>
                         </Grid_Cell>

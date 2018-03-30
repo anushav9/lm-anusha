@@ -16,7 +16,7 @@ export default class Footer extends Component {
 
                             <img className={style.footer__logo} src="../../assets/images/logo_white.png" alt="LaundryMate"/>
 
-                            <Paragraph style={{marginBottom:'0'}}>Laundry and dry-cleaning on demand, delivered right to your door.</Paragraph>
+                            <Paragraph className={style.paragraph}>Laundry and dry-cleaning on demand, delivered right to your door.</Paragraph>
                             <div className={style.socialMediaIcons}>
                                 <ul className={classy(style.navList,style.horiz,this.props.className)}>
                                     <li className={classy(style.navList__item, style.socialMediaIcons__item__facebook)}>
