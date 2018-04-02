@@ -126,7 +126,7 @@ export default class Home extends Component {
                                     <Section type="banner" color="primary">
                                         <Container>
                                             <Heading kind='h2' color="white" weight="lighter">Download LaundryMate App</Heading>
-                                            <Paragraph>Our app is available for free</Paragraph>
+                                            <span>Our app is available for free</span>
                                             <AppStoreButtons type='horiz'></AppStoreButtons>
                                         </Container>
                                     </Section>

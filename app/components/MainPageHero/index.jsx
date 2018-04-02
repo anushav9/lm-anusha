@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import style from './style.scss';
 import { classy } from 'utils';
-import { Container, Section, Heading, Paragraph, Anchor, Grid, Grid_Cell} from 'components';
+import { Container, Section, Heading, Paragraph, Button, Grid, Grid_Cell} from 'components';
 
 export default class MainPageHero extends Component {
 
@@ -46,7 +46,7 @@ export default class MainPageHero extends Component {
                                 <Heading kind="h1" color="white">{this.props.title}</Heading>
                                 <Paragraph className={style.paragraph}>{this.props.paragraph}</Paragraph>
                                 {this.props.buttonText &&
-                                    <Anchor className={classy(style.button, style.button__cta, style.button__large)} style={{ background:`${this.props.buttonBackground}`,margin:0}} href={this.props.href}>{this.props.buttonText}</Anchor>
+                                    <Button cta="true" large='true' style={{ background:`${this.props.buttonBackground}`,margin:0}} href={this.props.href}>{this.props.buttonText}</Button>
                                 }
                                 {this.props.children}
                             </div>

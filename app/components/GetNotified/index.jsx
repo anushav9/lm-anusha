@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { classy } from 'utils';
 import style from './style.scss';
-import { Section, Container, Grid, Grid_Cell, SectionHeader, Form, Input, Anchor} from 'components';
+import { Section, Container, Grid, Grid_Cell, SectionHeader, Form, Input, Button} from 'components';
 
 
 export default class GetNotified extends Component {
@@ -31,7 +31,7 @@ export default class GetNotified extends Component {
                                         </Grid_Cell>
 
                                         <Grid_Cell xl={3} className={style.button__notified}>
-                                            <Anchor className={classy(style.button, style.button__cta,style.button__large)} style={{ background:'linear-gradient(270deg, #4DD0E1 0%, #2196F3 100%)',margin:0}} href='#'>get notified</Anchor>
+                                            <Button large='true' cta='true' style={{ background:'linear-gradient(270deg, #4DD0E1 0%, #2196F3 100%)',margin:0}} href='#'>get notified</Button>
                                         </Grid_Cell>
                                     </Grid>
                                 </Form>

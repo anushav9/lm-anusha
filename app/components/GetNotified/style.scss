@@ -1,5 +1,4 @@
 @import "theme";
-@import "buttons";
 
 .grid{
 
@@ -18,9 +17,9 @@
 }
 
 .button__notified {
-    padding-left: 12px;
-    margin-top: 10px;
+    margin-left: 15px;
     @include screen-xl {
         margin-top: 17px;
+        margin-left: 0;
     }
 }

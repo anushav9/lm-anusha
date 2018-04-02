@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import style from './style.scss';
 import { classy } from 'utils';
-import {Heading,Form,Container,Input,Section,SectionHeader,Select,Checkbox, Paragraph, Grid, Grid_Cell, Anchor} from 'components';
+import {Heading,Form,Container,Input,Section,SectionHeader,Select,Checkbox, Paragraph, Grid, Grid_Cell,Button} from 'components';
 
 export default class ContactForm extends Component {
     render() {
@@ -88,7 +88,7 @@ export default class ContactForm extends Component {
             </Grid>
             <div className={style.form__footer}>
             <span>A team member will be in contact with you in 2-3 business days. Thank you for your patience.</span>
-            <Anchor className={classy(style.button, style.button__cta,style.button__large,style.button__submit)}  href='#'>submit</Anchor>
+            <Button large='true' cta='true' submit='true' href='#'>submit</Button>
         </div>
         </Form>
     </Section>

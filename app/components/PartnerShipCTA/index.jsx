@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import style from './style.scss';
 import { classy } from 'utils';
-import {Section,Container, Heading,Anchor,SectionHeader, Paragraph,Grid, Grid_Cell} from 'components';
+import {Section,Container, Heading, Button, SectionHeader, Paragraph, Grid, Grid_Cell} from 'components';
 
 export default class PartnerShipCTA extends Component {
     render() {
@@ -10,10 +10,10 @@ export default class PartnerShipCTA extends Component {
                 <Container>
                     <Grid>
                         <Grid_Cell md={6}>
-                            <div classname={style.driverAppSection__content}>
+                            <div className={style.driverAppSection__content}>
                             <Heading kind='h2' color='white'>{this.props.title}</Heading>
                                 <Paragraph className={style.paragraph}>Signing up is easy and hassle free. Join the team today!</Paragraph>
-                                <Anchor className={classy(style.button, style.button__primary, style.button__large)} href="/become-a-partner">become a partner</Anchor>
+                                <Button large='true' primary='true' href="/become-a-partner">become a partner</Button>
                             </div>
                         </Grid_Cell>
 

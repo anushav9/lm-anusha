@@ -51,7 +51,7 @@ export default class Footer extends Component {
                         <div>
                             <ul  className={style.navList}>
                                 <li className={style.navList__item}>
-                                    <a className={style.navList__link} href="https://dashboard.laundrymate.io/">Partner Login</a>
+                                    <a className={style.navList__link} href="https://dashboard.laundrymate.io/"  target="_blank">Partner Login</a>
                                 </li>
                                 <li className={style.navList__item}>
                                     <a className={style.navList__link} href="/become-a-partner">Become a Partner</a>

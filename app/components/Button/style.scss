@@ -1,36 +1,19 @@
 @import 'theme';
 
 .button {
-    height: 4.6rem;
-    font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     display: inline-block;
-    border: 2px solid transparent;
-    position: relative;
-    overflow: hidden; // prevent ripple overflow
-    text-decoration: none;
-    font-family: $font-family;
-    padding: 0 20px;
+    line-height: 3.6rem;
+    padding: 0 10px;
+    border-radius: 4px;
     text-align: center;
-    outline: none;
-    user-select: none;
-    vertical-align: middle;
-    min-width: 8.8rem;
-    color: white;
-    background-color: $color-primary;
     cursor: pointer;
-    border-radius: $radius;
-    font-weight: $font-weight-semibold;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
 
-    .buttonInner {
-        display: inline-flex;
-        align-items: center;
-    }
+    // .buttonInner {
+    //     display: inline-flex;
+    //     align-items: center;
+    // }
 
     &--small {
         height: 2.8rem;
@@ -56,12 +39,39 @@
         line-height: 2.9rem;
     }
 
+    &--primary {
+        border-radius: 4px;
+        background-color: $white;
+        color: $brand-cta;
+        box-shadow: 0 2px 2px 0 rgba(35,10,74,0.15);
+        text-transform: uppercase;
+    }
+
     &--large {
-        height: 4.5rem;
-        line-height: 4.4rem;
-        padding: 0 $gutter-lg;
         // font-size: 1.4rem;
         // font-weight: $font-weight-semibold;
+        line-height: 42px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &--cta {
+        text-transform: uppercase;
+        box-shadow: 0 6px 20px 0 rgba(0,0,0,0.15);
+        color: $white;
+        @include tablet {
+             margin-left: 10px;
+        }
+    }
+
+    &--submit
+     {
+        height: 45px;
+        width: 115px;
+        border-radius: 4px;
+        background-color: $brand-primary;
+        margin: 20px auto;
+        display: block;
     }
 
     &--large.button--border {
@@ -134,137 +144,138 @@
     line-height: 1;
 }
 
-@each $kind, $color in $color-presets {
-    .button--#{$kind} {
-        background: $color;
-
-        @if lightness($color) > 75 {
-            color: $color-base;
-        }
-
-        @else {
-            color: white;
-        }
-
-        $hover-color: lighten($color, 5%);
-
-        &:hover,
-        &:focus {
-            background: $hover-color;
-
-            @if lightness($hover-color) > 75 {
-                color: $color-base;
-            }
-
-            @else {
-                color: white;
-            }
-        }
-
-        $active-color: darken($color, 5%);
-
-        &:active {
-            background: $active-color;
-
-            @if lightness($active-color) > 75 {
-                color: $color-base;
-            }
-
-            @else {
-                color: white;
-            }
-        }
-
-        &.button--border {
-            border-color: $color;
-            color: $color;
-            background: transparent;
-
-            &:hover,
-            &:focus {
-                background: transparentize($color, 0.9);
-                color: $color;
-            }
-
-            &:active {
-                background: $color;
-
-                @if lightness($color) > 75 {
-                    color: $color-base;
-                }
-
-                @else {
-                    color: white;
-                }
-            }
-        }
-
-        &.button--dim {
-            background: transparentize($color, 0.9);
-            color: $color;
-
-            &:hover,
-            &:focus {
-                background: $color;
-
-                @if lightness($color) > 75 {
-                    color: $color-base;
-                }
-
-                @else {
-                    color: white;
-                }
-            }
-
-            $active-color: darken($color, 5%);
-
-            &:active {
-                background: $active-color;
-
-                @if lightness($active-color) > 75 {
-                    color: $color-base;
-                }
-
-                @else {
-                    color: white;
-                }
-            }
-        }
-
-        &.button--text {
-            background: transparent;
-            color: $color;
-
-            $hover-color: scale-color($color, $lightness: 80%);
-
-            &:hover,
-            &:focus {
-
-                background-color: transparent;
-                opacity: 0.5;
-            }
-
-            &.button--text.button--white:hover,
-            &.button--text.button--white:focus {
-                border-color: #FFF;
-            }
-
-            &:active {
-                background: $color;
-                color: white;
-            }
-        }
-
-        &.button--disabled,
-        &.button--disabled:active {
-            opacity: 0.5;
-            pointer-events: none;
-        }
-
-        &.button--isFetching,
-        &.button--isFetching:active {
-            opacity: 0.9;
-            pointer-events: none;
-        }
-    }
-}
+// @each $kind, $color in $color-presets {
+//     .button--#{$kind} {
+//         background: $color;
+//
+//         @if lightness($color) > 75 {
+//             color: $color-base;
+//         }
+//
+//         @else {
+//             color: white;
+//         }
+//
+//         $hover-color: lighten($color, 5%);
+//
+//         &:hover,
+//         &:focus {
+//             background: $hover-color;
+//
+//             @if lightness($hover-color) > 75 {
+//                 color: $color-base;
+//             }
+//
+//             @else {
+//                 color: white;
+//             }
+//         }
+//
+//         $active-color: darken($color, 5%);
+//
+//         &:active {
+//             background: $active-color;
+//
+//             @if lightness($active-color) > 75 {
+//                 color: $color-base;
+//             }
+//
+//             @else {
+//                 color: white;
+//             }
+//         }
+//
+//         &.button--border {
+//             border-color: $color;
+//             color: $color;
+//             background: transparent;
+//
+//             &:hover,
+//             &:focus {
+//                 background: transparentize($color, 0.9);
+//                 color: $color;
+//             }
+//
+//             &:active {
+//                 background: $color;
+//
+//                 @if lightness($color) > 75 {
+//                     color: $color-base;
+//                 }
+//
+//                 @else {
+//                     color: white;
+//                 }
+//             }
+//         }
+//
+//         &.button--dim {
+//             background: transparentize($color, 0.9);
+//             color: $color;
+//
+//             &:hover,
+//             &:focus {
+//                 background: $color;
+//
+//                 @if lightness($color) > 75 {
+//                     color: $color-base;
+//                 }
+//
+//                 @else {
+//                     color: white;
+//                 }
+//             }
+//
+//             $active-color: darken($color, 5%);
+//
+//             &:active {
+//                 background: $active-color;
+//
+//                 @if lightness($active-color) > 75 {
+//                     color: $color-base;
+//                 }
+//
+//                 @else {
+//                     color: white;
+//                 }
+//             }
+//         }
+//
+//         &.button--text {
+//             background: transparent;
+//             color: $color;
+//
+//             $hover-color: scale-color($color, $lightness: 80%);
+//
+//             &:hover,
+//             &:focus {
+//
+//                 background-color: transparent;
+//                 opacity: 0.5;
+//             }
+//
+//             &.button--text.button--white:hover,
+//             &.button--text.button--white:focus {
+//                 border-color: #FFF;
+//             }
+//
+//             &:active {
+//                 background: $color;
+//                 color: white;
+//             }
+//         }
+// 
+//         &.button--disabled,
+//         &.button--disabled:active {
+//             opacity: 0.5;
+//             pointer-events: none;
+//
+//         }
+//
+//         &.button--isFetching,
+//         &.button--isFetching:active {
+//             opacity: 0.9;
+//             pointer-events: none;
+//         }
+//     }
+// }

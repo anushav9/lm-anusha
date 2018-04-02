@@ -10,6 +10,9 @@ export default class Button extends Component {
     static propTypes = {
         large: PropTypes.bool, // size
         small: PropTypes.bool, // size
+        primary: PropTypes.bool,
+        submit: PropTypes.bool,
+        cta: PropTypes.bool,
         block: PropTypes.bool,
         href: PropTypes.string,
         kind: PropTypes.string,
@@ -90,7 +93,7 @@ export default class Button extends Component {
     }
 
     render() {
-        const { type, isFetching, dim, children, label, href, kind, text, border, disabled, block, large, small, dialog } = this.props;
+        const { type, isFetching, dim, children, label, href, kind, text, border, disabled, block, large, small, dialog, primary, submit, cta } = this.props;
 
         const className = classy(
             style.button,
@@ -105,6 +108,9 @@ export default class Button extends Component {
             block && style['button--block'],
             large && style['button--large'],
             small && style['button--small'],
+            primary && style['button--primary'],
+            submit && style['button--submit'],
+            cta && style['button--cta'],
             dialog && style['button--dialog'],
             typeof dialog === 'string' && style[`button--dialog-${dialog}`],
             this.props.className,
